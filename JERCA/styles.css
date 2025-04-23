@@ -1,0 +1,65 @@
+/* General */
+:root {
+  --primary-color: #f0b445;
+  --secondary-color: #1e2830;
+  --black: #171717;
+  --white: #fbfbfa;
+  --header-font: "Lato", sans-serif;
+  --general-font: "Bebas Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--general-font);
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  z-index: 9;
+}
+
+/* Nav Bar */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--header-font);
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+.nav__logo .logo{
+    color: var(--white);
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-self: flex-end;
+    color: var(--white);
+}
