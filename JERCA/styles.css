@@ -33,8 +33,6 @@ nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
-  max-width: 1440px;
-  margin-inline: auto;
   z-index: 9;
 }
 
@@ -53,13 +51,36 @@ nav {
   justify-content: space-between;
   background-color: var(--secondary-color);
 }
-.nav__logo .logo{
-    color: var(--white);
+.nav__logo .logo {
+  color: var(--white);
 }
 
 .nav__menu__btn {
-    font-size: 1.5rem;
-    cursor: pointer;
-    justify-self: flex-end;
-    color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  justify-self: flex-end;
+  color: var(--white);
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+.nav__links a {
+  color: var(--white);
+}
+
+.nav__links.open {
+  transform: translateY(100%);
 }

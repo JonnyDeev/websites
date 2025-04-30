@@ -99,7 +99,6 @@ body {
 }
 .nav__links.open {
   transform: translateY(100%);
-  z-index: 10;
 }
 
 .nav__links a {
