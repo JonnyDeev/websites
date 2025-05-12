@@ -18,21 +18,17 @@ navLinks.addEventListener("click", () => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
   loop: true,
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper2", {
-  loop: true,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
   },
-  thumbs: {
-    swiper: swiper,
-  },
+
+  
+
+ 
 });
