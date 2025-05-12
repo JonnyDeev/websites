@@ -3,13 +3,14 @@
 :root {
   --primary-color: #0f172a;
   --secondary-color: #e2e8f0;
-  --highlights: #f97316;
+  --highlights: #efb60f;
   --effects: #d97706;
   --text-dark: #171717;
   --text-light: #767268;
   --extra-light: #f7f8fd;
   --white: #fbfbfa;
   --header-font: "Lato", sans-serif;
+  --max-width: 1440px;
   --general-font: "Bebas Neue", sans-serif;
 }
 
@@ -44,6 +45,10 @@ nav {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.text-light {
+  color: var(--text-light);
 }
 
 /*Nav-Bar*/
@@ -96,10 +101,85 @@ img {
   font-weight: 500;
 }
 
-
 .nav__links.open {
   transform: translateY(100%);
 }
+
+.section__container {
+  padding: 5rem 0;
+  margin-inline: auto;
+  max-width: var(--max-width);
+}
+
+.section__hero-image {
+  position: relative;
+  display: inline-block;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0)),
+    color-stop(90%, rgba(0, 0, 0, 0.7))
+  );
+}
+
+.section__hero-image img {
+  z-index: -1;
+  position: relative;
+  display: block;
+  filter: blur(0.6px);
+}
+
+.section__hero-content {
+  position: absolute;
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 6rem 0;
+  height: auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section__hero-content h4 {
+  font-size: 2rem;
+  font-family: var(--header-font);
+  max-width: 200px;
+  color: var(--white);
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.section__hero-content p {
+  color: var(--extra-light);
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  font-weight: 500;
+  flex: 1;
+  border-radius: 2px;
+  line-height: 1.5rem;
+}
+
+.section__hero-btn {
+  border: none;
+  background-color: var(--highlights);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 5px;
+  color: var(--extra-light);
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: .3s;
+  display: none;
+}
+
+.section__hero-btn:hover {
+background-color: var(--effects);
+}
+
 /* SWIPER JS */
 
 /* MEDIA QUERIES */
