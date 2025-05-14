@@ -18,17 +18,22 @@ navLinks.addEventListener("click", () => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-const swiper = new Swiper('.swiper', {
+lightGallery(document.getElementById("gallery"), {
+  plugins: [lgZoom, lgThumbnail],
+  speed: 400,
+  download: true,
+  zoom: true,
+  actualSize: true,
+  thumbnail: true,
+});
+
+const swiper = new Swiper(".swiper", {
   // Optional parameters
-  direction: 'horizontal',
+  direction: "horizontal",
   loop: true,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
-
-  
-
- 
 });

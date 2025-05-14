@@ -23,10 +23,11 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
     />
-
     <link rel="stylesheet" href="styles/styles.css" />
+    <!-- <link rel="stylesheet" href="styles/test.css" /> -->
+
     <title>Jerca Services</title>
   </head>
   <body>
@@ -99,10 +100,7 @@
         </div>
         <div class="section__services-card">
           <div class="section__services-card-icon">
-            <img
-              src="assets/pw-icon-transparent.png"
-              alt="pressure-cleaning"
-            />
+            <img src="assets/pw-icon-transparent.png" alt="pressure-cleaning" />
           </div>
           <h4>Pressure Cleaning</h4>
           <p class="text-light">
@@ -130,6 +128,26 @@
       </div>
       <div class="section__projects-gallery">
         <!-- TODO:ADD GALLERY OF IMAGE -->
+        <section id="gallery">
+          <a href="assets/gallery-1.jpg">
+            <img src="assets/gallery-1.jpg" alt="Image 1" />
+          </a>
+          <a href="assets/gallery-2.jpg">
+            <img src="assets/gallery-2.jpg" alt="Image 2" />
+          </a>
+          <a href="assets/gallery-3.jpg">
+            <img src="assets/gallery-3.jpg" alt="Image 3" />
+          </a>
+          <a href="assets/gallery-4.jpg">
+            <img src="assets/gallery-4.jpg" alt="Image 3" />
+          </a>
+          <a href="assets/gallery-5.jpg">
+            <img src="assets/gallery-5.jpg" alt="Image 3" />
+          </a>
+          <a href="assets/gallery-6.jpg">
+            <img src="assets/gallery-6.jpg" alt="Image 3" />
+          </a>
+        </section>
       </div>
     </section>
     <!-- TESTIMONIALS -->
@@ -315,13 +333,28 @@
       <footer>© 2025 Jerca Services. All rights reserved.</footer>
     </section>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- LightGallery Test -->
+    <!-- <section id="gallery">
+      <a href="https://picsum.photos/id/1018/1000/600">
+        <img src="https://picsum.photos/id/1018/200/140" alt="Image 1" />
+      </a>
+      <a href="https://picsum.photos/id/1015/1000/600">
+        <img src="https://picsum.photos/id/1015/200/140" alt="Image 2" />
+      </a>
+      <a href="assets/gallery-1.jpg">
+        <img src="assets/gallery-1.jpg" alt="Image 3" />
+      </a>
+    </section> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- LightGallery -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <!-- LightGallergy Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
 
-<!-- 
-TODO: Add a footer section with contact information and social media links
-TODO: Add a contact form section for inquiries -->
+<!-- TODO: Add a footer section with contact information and social media links  -->
