@@ -49,10 +49,10 @@
       </div>
       <ul class="nav__links" id="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Our Work</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <!-- HERO SECTION -->
@@ -123,7 +123,7 @@
       </div>
     </section>
     <!-- GALLERY -->
-    <section class="section__container section__projects">
+    <section class="section__container section__projects" id="projects">
       <div class="section__projects-header">
         <h4>Recent Projects</h4>
         <p class="text-light">Take a look at some of our recent work</p>
@@ -133,7 +133,7 @@
       </div>
     </section>
     <!-- TESTIMONIALS -->
-    <section class="section__container section__testimonials">
+    <section class="section__container section__testimonials" id="testimonials">
       <div class="section__testimonials-header">
         <h4>What Our Clients Say</h4>
 
@@ -209,7 +209,7 @@
       </div>
     </section>
     <!-- CONTACT FORM -->
-    <section class="section__container section__contact">
+    <section class="section__container section__contact" id="contact">
       <div class="section__contact-header">
         <h4>Contact Us</h4>
         <p class="text-light">
@@ -250,13 +250,13 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <input
-              type="text"
-              id="message"
+            <textarea
               name="message"
+              id="message"
               placeholder="Tell us about your project"
-              required
-            />
+              cols="4"
+              rows="5"
+            ></textarea>
           </div>
           <button type="submit">
             <span class="material-symbols-outlined">Send</span>
@@ -266,21 +266,27 @@
         <div class="section__contact-contact-info">
           <div class="contact-group">
             <span class="material-symbols-outlined">phone</span>
-            <h4>Phone</h4>
-            <p class="text-light">(555) 123-4567</p>
-            <p class="text-light">Mon-Fri: 8am-6pm</p>
+            <div>
+              <h4>Phone</h4>
+              <p class="text-light">(555) 123-4567</p>
+              <p class="text-light">Mon-Fri: 8am-6pm</p>
+            </div>
           </div>
           <div class="contact-group">
-            <span class="material-symbols-outlined">phone</span>
-            <h4>Phone</h4>
-            <p class="text-light">(555) 123-4567</p>
-            <p class="text-light">Mon-Fri: 8am-6pm</p>
+            <span class="material-symbols-outlined">email</span>
+            <div>
+              <h4>Email</h4>
+              <p class="text-light">Jercaservices@outlook.com</p>
+              <p class="text-light">Get your response within 24hrs!</p>
+            </div>
           </div>
           <div class="contact-group">
-            <span class="material-symbols-outlined">phone</span>
-            <h4>Phone</h4>
-            <p class="text-light">(555) 123-4567</p>
-            <p class="text-light">Mon-Fri: 8am-6pm</p>
+            <span class="material-symbols-outlined">map</span>
+            <div>
+              <h4>Location</h4>
+              <p class="text-light">123th St 45Ave NW</p>
+              <p class="text-light">Miami, FL</p>
+            </div>
           </div>
         </div>
       </div>
@@ -318,5 +324,4 @@
 
 <!-- 
 TODO: Add a footer section with contact information and social media links
-TODO: Add a testimonials section with customer reviews
 TODO: Add a contact form section for inquiries -->
