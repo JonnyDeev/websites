@@ -433,6 +433,71 @@ input[type="email"] {
   flex-direction: column;
   gap: 0.3rem;
 }
+
+
+.section__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.section__footer-header h4 {
+  text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.section__footer-header p {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.section__footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* padding: 3rem; */
+}
+
+.section__footer-socials  a{
+  color: var(--white);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  
+}
+
+.section__projects-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.section__projects-header h4 {
+  font-size: 2rem;
+  color: var(--text-dark);
+
+}
+
+.section__projects-header p {
+  margin-bottom: 2rem;
+}
+
+.footer {
+  color: var(--white);
+  font-size: 0.8rem;
+  border-top: 1px solid white;
+  padding: 1rem 5rem;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+}
 /* SWIPER JS */
 
 .swiper {

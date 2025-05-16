@@ -21,7 +21,7 @@ navLinks.addEventListener("click", () => {
 lightGallery(document.getElementById("gallery"), {
   plugins: [lgZoom, lgThumbnail],
   speed: 400,
-  download: true,
+  download: false,
   zoom: true,
   actualSize: true,
   thumbnail: true,
