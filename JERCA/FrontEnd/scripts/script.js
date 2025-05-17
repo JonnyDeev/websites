@@ -37,3 +37,35 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+const contact_btn = document.querySelector("#contact-btn");
+
+contact_btn.addEventListener('click', () => {
+  const section = document.querySelector('#contact')
+  if (section) {
+    section.scrollIntoView()
+  }
+})
+
+ document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    console.log('test')
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const res = await fetch('/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    alert(result.message);
+  });

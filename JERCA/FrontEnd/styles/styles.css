@@ -60,7 +60,7 @@ img {
 
 /*Nav-Bar*/
 .nav__header {
-  height: 5rem;
+  height: 4rem;
   max-width: 1400px;
   padding: 0.8rem 0.8rem;
   display: flex;
@@ -71,7 +71,7 @@ img {
 }
 
 .nav__header .nav__logo a img {
-  max-width: 60px;
+  max-width: 50px;
   height: auto;
 }
 
@@ -131,6 +131,7 @@ img {
   z-index: -1;
   position: relative;
   display: block;
+  padding-top: .5rem;
   filter: blur(0.6px);
 }
 
@@ -173,12 +174,17 @@ img {
   font-weight: 600;
   border-radius: 5px;
   color: var(--extra-light);
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   margin-left: 1rem;
   cursor: pointer;
   transition: 0.3s;
-  display: none;
+  /* display: none; */
+  position: relative;
+  right: 2rem;
+  bottom: 2rem;
+  align-self: flex-end;
 }
+
 
 .section__hero-btn:hover {
   background-color: var(--effects);
