@@ -28,16 +28,18 @@ lightGallery(document.getElementById("gallery"), {
 });
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
+  slidesPerView: 1,
+  spaceBetween: 30,
   loop: true,
-
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
   },
 });
-
 function scrollToSection(id) {
   const section = document.getElementById(id);
   if (section) {
