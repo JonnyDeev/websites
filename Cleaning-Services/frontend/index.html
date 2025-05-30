@@ -16,14 +16,18 @@
     <link rel="stylesheet" href="styles/output.css" />
     <title>ANFEGA | Cleaning Services</title>
   </head>
-  <body
-    class="bg-[#1a241f] font-body-font box-border m-0 p-0 text-gray-100"
-  >
+  <body class="bg-[#1a241f] font-body-font box-border m-0 p-0 text-gray-100">
     <main>
-      <nav class="w-full h-20 border-amber-50 border-2 flex justify-between items-center px-4 fixed top-0">
-        <span class="text-3xl text-gray-100 font-[courgette]">ANFEGA</span>
-        <i class="ri-menu-line text-3xl"></i>
-        <ul class="hidden  w-full absolute top-full left-0 flex-col gap-4 px-4 py-4">
+      <nav
+        class="w-full h-20 border-amber-50 border-2 flex justify-between items-center px-4 fixed top-0"
+      >
+        <span class="text-3xl text-gray-50 font-[courgette]">ANFEGA</span>
+        <button id="mobile-menu">
+          <i class="ri-menu-line text-3xl"></i>
+        </button>
+        <ul id="mobile-navbar"
+          class="hidden w-full absolute top-full left-0 flex-col gap-4 px-4 py-4"
+        >
           <li><a href="#" class="block">Residential Services</a></li>
           <li><a href="#" class="block">Corporate Services</a></li>
           <li><a href="#" class="block">Testimonies</a></li>
@@ -31,11 +35,20 @@
           <li><a href="#" class="block">Contact Us</a></li>
         </ul>
       </nav>
-      <section class="px-4 relative top-24 flex flex-col items-center justify-center border-2 border-amber-50 h-screen">
+      <section
+        class="px-4 relative top-24 flex flex-col items-center justify-center border-2 border-amber-50 h-screen"
+      >
         <h4 class="text-5xl">Sparkling Clean Homes, Guaranteed</h4>
-        <p class="py-4">Experience the joy of a spotless home with out professional cleaning services. We tailor our approach to meet your specific needs. Ensuring a pristine environment every time.</p>
-        <button class="bg-secondary-color rounded-2xl px-3 py-2 cursor-pointer">Book Now</button>
+        <p class="py-4">
+          Experience the joy of a spotless home with out professional cleaning
+          services. We tailor our approach to meet your specific needs. Ensuring
+          a pristine environment every time.
+        </p>
+        <button class="bg-secondary-color rounded-2xl px-3 py-2 cursor-pointer">
+          Book Now
+        </button>
       </section>
     </main>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
