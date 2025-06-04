@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,20 +18,22 @@
     <link rel="stylesheet" href="styles/output.css" />
     <title>ANFEGA | Cleaning Services</title>
   </head>
-  <body class="bg-[#1a241f] font-body-font box-border m-0 p-0 text-gray-100">
+  <body class="bg-slate-900 font-body-font box-border m-0 p-0 text-slate-900">
     <main>
       <!-- NAV BAR -->
       <nav
         class="w-full h-20 flex justify-between items-center px-4 fixed top-0"
       >
-        <span class="text-3xl text-gray-50 font-[courgette]">ANFEGA</span>
-        <button class="md:hidden z-51 text-3xl" id="menu-btn">
-          <i id="menu-icon" class="ri-menu-line text-3xl"></i>
+        <div class="w-16 h-auto">
+          <img src="./assets/Logo_blank.png" alt="" />
+        </div>
+        <button class="md:hidden z-51 text-4xl" id="menu-btn">
+          <i id="menu-icon" class="ri-menu-line text-4xl text-white"></i>
         </button>
 
         <ul
           id="nav-bar"
-          class="top-0 right-0 h-screen w-64 fixed transition-transform duration-300 translate-x-full transform flex-col flex px-4 py-4 bg-primary-color z-50 text-center shadow-md pt-24 md:flex-row md:justify-center"
+          class="top-0 right-0 h-screen w-full fixed transition-transform duration-300 translate-x-full transform flex-col flex px-4 py-4 bg-slate-900 z-50 text-center shadow-md pt-24 md:flex-row md:justify-center"
         >
           <li>
             <a
@@ -68,19 +72,26 @@
           </li>
         </ul>
       </nav>
-      <!-- <section
-        class="px-4 relative top-24 flex flex-col items-center justify-center border-2 border-amber-50 h-screen"
-      >
-        <h4 class="text-5xl">Sparkling Clean Homes, Guaranteed</h4>
-        <p class="py-4">
-          Experience the joy of a spotless home with out professional cleaning
-          services. We tailor our approach to meet your specific needs. Ensuring
-          a pristine environment every time.
-        </p>
-        <button class="bg-primary">
-          Book Now
-        </button>
-      </section> -->
+      <!-- Hero Section -->
+      <section class="flex relative items-center justify-center w-full pt-52 px-4">
+        <div class="absolute -z-10 top-20 right-0 brightness-65 overflow-hidden w-full h-[80vh]">
+          <img src="./assets/hero_image.jpg" alt="hero-img" />
+        </div>
+        <div class="relative z-10">
+          <h4 class="text-5xl my-2 text-slate-50 font-bold">
+            Sparkling Clean Homes, Guaranteed
+          </h4>
+          <p class="py-4 my-2 text-slate-50 text-lg">
+            Experience the joy of a spotless home with out professional cleaning
+            services.
+          </p>
+          <button
+            class="bg-slate-900 my-2 px-4 py-3 text-lg text-slate-300 rounded-lg font-bold transform hover:scale-105 hover:bg-slate-700 transition-all duration-300 ease-in-out"
+          >
+            Book Now
+          </button>
+        </div>
+      </section>
     </main>
     <script src="scripts/script.js"></script>
   </body>
