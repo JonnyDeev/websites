@@ -74,13 +74,36 @@ document
     alert(result.message);
   });
 
+console.log(typeof ScrollReveal);
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
-  duration: "1000",
+  duration: 1000,
 };
 
-scrollReveal().reveal(".section__hero-content", {
+ScrollReveal().reveal(".section__hero-content", {
   ...scrollRevealOption,
-  delay: 200,
+  delay: 300,
+});
+
+ScrollReveal().reveal(".section__services-header", {
+  ...scrollRevealOption,
+  delay: 300,
+});
+ScrollReveal().reveal(".section__projects-header", {
+  ...scrollRevealOption,
+  delay: 300,
+});
+ScrollReveal().reveal(".section__projects-gallery", {
+  ...scrollRevealOption,
+  interval: 300,
+});
+ScrollReveal().reveal(".section__testimonials-header", {
+  ...scrollRevealOption,
+  delay: 300,
+});
+ScrollReveal().reveal(".section__contact-header", {
+  ...scrollRevealOption,
+  delay: 300,
 });
