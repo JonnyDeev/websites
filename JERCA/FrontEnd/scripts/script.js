@@ -64,7 +64,7 @@ document
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("https://localhost:3000", {
+    const res = await fetch("https://jerca-backend.onrender.com/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
