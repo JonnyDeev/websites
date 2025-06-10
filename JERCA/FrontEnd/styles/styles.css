@@ -66,7 +66,6 @@ button {
   font-family: var(--general-font);
 }
 
-a:focus,
 button:focus,
 input:focus,
 select:focus,
@@ -201,25 +200,50 @@ section {
 .section__hero-content p {
   color: var(--extra-light);
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 1.2rem;
   font-weight: 500;
   border-radius: 4px;
   line-height: 1.6;
 }
 
+.section__hero-content span {
+  color: var(--highlights);
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+.call-btn {
+  display: flex; /* Arrange icon and text horizontally */
+  align-items: center; /* Vertically center content */
+  gap: 0.5rem; /* Space between icon and text */
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--highlights);
+  font-size: 1rem;
+}
+
 .section__hero-btn {
   border: none;
   background-color: var(--highlights);
-  font-size: 1rem;
   font-weight: 600;
+  font-size: 1rem;
   border-radius: 4px;
   color: var(--white);
   padding: 0.8rem 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  align-self: flex-start;
   margin-left: 0;
 }
 
@@ -275,7 +299,18 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out forwards;
-  height: 100%;
+  max-height: 450px;
+}
+
+.call-btn:hover {
+  background-color: var(--highlights);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.call-btn i {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .section__services-card-icon {
@@ -422,7 +457,7 @@ section {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  height: 300px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   animation: fadeInUp 0.6s ease-out forwards;
@@ -663,6 +698,12 @@ section {
   transition: all 0.3s ease;
 }
 
+.section__footer-socials a i {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
 .section__footer-socials a:hover {
   background-color: var(--highlights);
   transform: translateY(-5px);
@@ -680,10 +721,27 @@ section {
   opacity: 0.8;
 }
 
+.website__creator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: gray;
+  font-size: 0.8rem;
+  background-color: var(--white);
+  width: 100%;
+  height: 20px;
+}
+.website__creator-link {
+  color: gray;
+}
+
 /* SWIPER JS */
 .swiper {
   width: 100%;
-  height: 350px;
+  height: 450px;
   padding-bottom: 50px;
   overflow: visible;
 }
@@ -771,6 +829,10 @@ section {
   }
 
   .section__hero-content {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    /* gap: 6rem; */
     top: 40%;
     left: 5%;
     transform: translateY(-40%);
@@ -779,19 +841,20 @@ section {
   }
 
   .section__hero-content h4 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    padding-top: 4rem;
   }
 
   .section__hero-content p {
     font-size: 1.1rem;
     width: 100%;
   }
+  .section__hero-content span {
+    color: var(--highlights);
+  }
 
   .section__hero-btn {
     font-size: 1rem;
-    right: auto;
-    bottom: auto;
-    margin-top: 1rem;
   }
 
   .section__services-content {
@@ -821,7 +884,7 @@ section {
     width: 100%;
     margin-inline: auto;
   }
-   .form-container button {
+  .form-container button {
     position: relative;
     left: 50%;
   }
@@ -862,6 +925,23 @@ section {
     width: 50%;
     gap: 4rem;
   }
+  .cta-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cta-container button {
+    width: 180px;
+    height: 50px;
+  }
+
+  .call-btn {
+    height: 50px;
+  }
+
   .section__container {
     padding: 5rem 2rem;
   }
@@ -870,6 +950,10 @@ section {
     top: 40%;
     left: 8%;
     max-width: 600px;
+  }
+
+  .section__hero-content h4 {
+    font-size: 3.5rem;
   }
 
   .section__services-card {
@@ -890,9 +974,14 @@ section {
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
   }
-   .form-container button {
+  .form-container button {
     position: relative;
     left: 50%;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    max-width: 500px;
   }
 
   .section__contact-contact-info {

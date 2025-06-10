@@ -49,25 +49,38 @@ function scrollToSection(id) {
 
 const contact_btn = document.querySelector("#contact-btn");
 
-contact_btn.addEventListener('click', () => {
-  const section = document.querySelector('#contact')
+contact_btn.addEventListener("click", () => {
+  const section = document.querySelector("#contact");
   if (section) {
-    section.scrollIntoView()
+    section.scrollIntoView();
   }
-})
+});
 
- document.getElementById('contact-form').addEventListener('submit', async (e) => {
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async (e) => {
     e.preventDefault();
-    console.log('test')
+    console.log("test");
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch('/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+    const res = await fetch("/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
 
     const result = await res.json();
     alert(result.message);
   });
+
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: "1000",
+};
+
+scrollReveal().reveal(".section__hero-content", {
+  ...scrollRevealOption,
+  delay: 200,
+});
