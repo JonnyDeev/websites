@@ -78,6 +78,45 @@ section {
   overflow: hidden; /* Prevents horizontal scrolling from animations */
 }
 
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-content button {
+  color: var(--white);
+  background-color: var(--highlights);
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
+margin-top: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: var(--general-font);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
 .text-light {
   color: var(--text-light);
 }

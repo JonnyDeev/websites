@@ -1,9 +1,12 @@
 const menuBtn = document.querySelector("#menu-btn");
 const navLinks = document.querySelector("#nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const contact_btn = document.querySelector("#contact-btn");
+const form = document.querySelector("#contact-form");
+const modal = document.querySelector("#modal");
+const closeModal = document.querySelector("#closeModal");
 
 function menuBtnHandler() {
-  console.log("test");
   navLinks.classList.toggle("open");
 
   const isOpen = navLinks.classList.contains("open");
@@ -47,8 +50,6 @@ function scrollToSection(id) {
   }
 }
 
-const contact_btn = document.querySelector("#contact-btn");
-
 contact_btn.addEventListener("click", () => {
   const section = document.querySelector("#contact");
   if (section) {
@@ -56,26 +57,27 @@ contact_btn.addEventListener("click", () => {
   }
 });
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", async (e) => {
-    e.preventDefault();
-    console.log("test");
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  console.log("test");
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("https://jerca-backend.onrender.com/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    const result = await res.json();
-    alert(result.message);
+  const res = await fetch("https://jerca-backend.onrender.com/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
   });
 
-console.log(typeof ScrollReveal);
+  const result = await res.json();
+  form.reset();
+  modal.showModal();
+});
 
+closeModal.addEventListener("click", () => {
+  console.log("test");
+  modal.close();
+});
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -106,4 +108,10 @@ ScrollReveal().reveal(".section__testimonials-header", {
 ScrollReveal().reveal(".section__contact-header", {
   ...scrollRevealOption,
   delay: 300,
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.open) {
+    modal.close();
+  }
 });
