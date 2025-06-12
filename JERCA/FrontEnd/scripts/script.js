@@ -4,6 +4,7 @@ const menuBtnIcon = menuBtn.querySelector("i");
 const contact_btn = document.querySelector("#contact-btn");
 const form = document.querySelector("#contact-form");
 const modal = document.querySelector("#modal");
+const modalMsg = document.querySelector('#modal-msg') 
 const closeModal = document.querySelector("#closeModal");
 
 function menuBtnHandler() {
@@ -57,22 +58,49 @@ contact_btn.addEventListener("click", () => {
   }
 });
 
+const status = document.getElementById("status");
+
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  console.log("test");
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
+  e.preventDefault(); // prevent redirect
 
-  const res = await fetch("https://jerca-backend.onrender.com/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  const formData = new FormData(form);
 
-  const result = await res.json();
-  form.reset();
-  modal.showModal();
+  try {
+    const response = await fetch("https://formsubmit.co/jonnyp.dev@gmail.com", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      modalMsg.innerText = "✅ Message sent successfully!";
+      form.reset();
+      modal.showModal()
+    } else {
+      modalMsg.innerText = "❌ There was an error sending your message.";
+      modal.showModal()
+    }
+  } catch (error) {
+    modalMsg.innerText = "❌ Network error.";
+    modal.showModal()
+  }
 });
+
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+//   console.log("test");
+//   const formData = new FormData(e.target);
+//   const data = Object.fromEntries(formData.entries());
+
+//   const res = await fetch("https://jerca-backend.onrender.com/contact", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(data),
+//   });
+
+//   const result = await res.json();
+//   form.reset();
+//   modal.showModal();
+// });
 
 closeModal.addEventListener("click", () => {
   console.log("test");
