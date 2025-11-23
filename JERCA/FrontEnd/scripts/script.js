@@ -23,7 +23,7 @@ navLinks.addEventListener("click", () => {
 });
 
 lightGallery(document.getElementById("gallery"), {
-  plugins: [lgZoom, lgThumbnail],
+  plugins: [lgVideo, lgZoom, lgThumbnail],
   speed: 400,
   download: false,
   zoom: true,
