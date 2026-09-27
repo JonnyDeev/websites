@@ -4,10 +4,34 @@ const menuBtnIcon = menuBtn.querySelector("i");
 const contact_btn = document.querySelector("#contact-btn");
 const form = document.querySelector("#contact-form");
 const modal = document.querySelector("#modal");
-const modalMsg = document.querySelector('#modal-msg') 
+const modalMsg = document.querySelector('#modal-msg')
 const closeModal = document.querySelector("#closeModal");
 
+// Gallery Filtering
+const filterBtns = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll("#gallery a");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all buttons
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    galleryItems.forEach(item => {
+      const category = item.getAttribute("data-category");
+      if (filter === "all" || category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+
 function menuBtnHandler() {
+
   navLinks.classList.toggle("open");
 
   const isOpen = navLinks.classList.contains("open");
